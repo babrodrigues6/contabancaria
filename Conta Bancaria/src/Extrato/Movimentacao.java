@@ -7,7 +7,7 @@ public class Movimentacao {
 	private double saldo = 8000;
 	 	
 	public void somar100Reais() {
-		saldo =+ 100;
+		saldo += 100;
 	}
 	
 	public void diminui100Reais() {
@@ -20,9 +20,23 @@ public class Movimentacao {
 	}
 	
 	public void depositarDinheiro (double deposito) {
-		saldo =+ deposito;
+		saldo += deposito;
 	}
 		
+	public double getSaldo() {
+		return saldo;
+	}
+	
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	@Override
+	public String toString() {
+		return "Movimentacao [descricao=" + descricao + ", saldo=" + saldo + "]";
+	}
+
+	
 	
 
 }
